@@ -1,18 +1,12 @@
 
-function isNice(arr) {
+function isNice(arr){
   let bool = [];
-
-  for (var i = 0; i < arr.length; i++) {
-    if ((arr.includes(arr[i] + 1)) || arr.includes((arr[i] - 1)) && arr.length !== 0) {
-      bool.push('true');
-    } else {
-      bool.push('false');
+  for (let i = 0; i < arr.length; i++) {
+    bool.push('false');
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j] - 1 || arr[i] === arr[j] + 1) bool[i] = 'true';
     }
-    console.log(bool);
   }
-  for (var j = 0; j < bool.length; j++) {
-    if (bool.includes('false')) {
-      return false;
-    } else { return true; }
-  }
+  for (let k = 0; k < bool.length; k++) if (bool[k] === 'false') return false;
+  return bool.length !== 0 ? true : false;
 }

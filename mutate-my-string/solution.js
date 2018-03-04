@@ -1,3 +1,4 @@
+
 function mutateMyStrings(stringOne, stringTwo){
   let one = stringOne.split(''), two = stringTwo.split('');
   let endString = stringOne.concat('\n');

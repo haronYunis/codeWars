@@ -1,3 +1,5 @@
+// Sum of Odd Cubed Numbers
+
 function cubeOdd(arr) {
   return arr.length === 0
     || arr.filter(x => x % 2 === 1 || x % 2 === -1).length === 0 ? 0
